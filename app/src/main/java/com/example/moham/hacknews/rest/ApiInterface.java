@@ -14,7 +14,7 @@ import retrofit2.http.Query;
 public interface ApiInterface {
     @GET("articles?source=hacker-news&sortBy=top")
     Call<ResponseModel> getTopArticles(@Query("apiKey") String ApiKey);
-    @GET("articles?source=hacker-news&sortBy=lates")
+    @GET("articles?source=hacker-news&sortBy=latest")
     Call<ResponseModel> getLatestArticles(@Query("apiKey") String ApiKey);
 
 }
