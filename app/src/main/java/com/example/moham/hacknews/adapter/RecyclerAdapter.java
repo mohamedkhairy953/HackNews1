@@ -45,7 +45,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         if (author == null) author = "no author";
         if (publishedAt == null) publishedAt = "no date";
 
-        holder.author.setText("By : " + author);
+     //   holder.author.setText("By : " + author);
         holder.title.setText(articles.get(position).getTitle());
         holder.desc.setText(articles.get(position).getDescription());
         holder.date.setText("Date : " + publishedAt);
@@ -70,7 +70,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
             title = (TextView) itemView.findViewById(R.id.title);
             desc = (TextView) itemView.findViewById(R.id.description);
             date = (TextView) itemView.findViewById(R.id.published_at);
-            author = (TextView) itemView.findViewById(R.id.author);
+       //     author = (TextView) itemView.findViewById(R.id.author);
             imageView = (ImageView) itemView.findViewById(R.id.image);
             title.setOnClickListener(new View.OnClickListener() {
                 @Override

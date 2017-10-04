@@ -45,7 +45,7 @@ public class LatestNews extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         final ProgressDialog dialog = new ProgressDialog(getContext());
-        dialog.setMessage("Loading...");
+        dialog.setMessage("Loading our 10 news ...");
         dialog.show();
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
         Call<ResponseModel> topArticles = apiService.getLatestArticles(API_KEY);
@@ -53,7 +53,7 @@ public class LatestNews extends Fragment {
             @Override
             public void onResponse(Call<ResponseModel> call, final Response<ResponseModel> response) {
                 final ArrayList<Articles> articles = response.body().getArticles();
-                recyc.setAdapter(new RecyclerAdapter(articles, R.layout.list_item, getContext()));
+                recyc.setAdapter(new RecyclerAdapter(articles, R.layout.list_item_new, getContext()));
                 dialog.dismiss();
                 getActivity().runOnUiThread(new Runnable() {
                     @Override

@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         recyc.setLayoutManager(new LinearLayoutManager(this));
 
         final ProgressDialog dialog=new ProgressDialog(this);
-        dialog.setMessage("Loading...");
+        dialog.setMessage("Loading our 10 news ...");
         dialog.show();
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
         Call<ResponseModel> topArticles = apiService.getTopArticles(API_KEY);

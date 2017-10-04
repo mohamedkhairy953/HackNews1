@@ -53,7 +53,7 @@ public class HotNews extends Fragment {
             @Override
             public void onResponse(Call<ResponseModel> call, final Response<ResponseModel> response) {
                 final ArrayList<Articles> articles = response.body().getArticles();
-                recyc.setAdapter(new RecyclerAdapter(articles,R.layout.list_item,getContext()));
+                recyc.setAdapter(new RecyclerAdapter(articles,R.layout.list_item_new,getContext()));
                 dialog.dismiss();
                 getActivity().runOnUiThread(new Runnable() {
                     @Override

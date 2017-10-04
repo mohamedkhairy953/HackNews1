@@ -87,9 +87,9 @@ public class TabbedActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Latest News";
+                    return "Latest 10";
                 case 1:
-                    return "Hot News";
+                    return "Hot 10";
             }
             return null;
         }
